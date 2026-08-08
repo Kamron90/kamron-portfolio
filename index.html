@@ -29,7 +29,7 @@
             text-decoration: none;
         }
 
-        /* Header */
+        /* HERO */
 
         header {
             min-height: 100vh;
@@ -37,18 +37,33 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 30px 20px;
-            background:
-                radial-gradient(circle at top, #1e3a8a 0%, #0f172a 45%);
+            padding: 40px 20px;
+            background: radial-gradient(
+                circle at top,
+                #1e3a8a 0%,
+                #0f172a 50%
+            );
         }
 
         .hero {
-            max-width: 800px;
+            max-width: 850px;
+        }
+
+        /* PROFILE PHOTO */
+
+        .profile-photo {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+            box-shadow: 0 0 35px rgba(56, 189, 248, 0.35);
+            margin-bottom: 25px;
         }
 
         .hero h1 {
             font-size: clamp(40px, 8vw, 72px);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #ffffff;
         }
 
@@ -70,6 +85,11 @@
             font-size: 18px;
         }
 
+        .location {
+            margin-top: 15px;
+            color: #94a3b8;
+        }
+
         .buttons {
             margin-top: 35px;
             display: flex;
@@ -79,6 +99,7 @@
         }
 
         .btn {
+            display: inline-block;
             padding: 12px 24px;
             border-radius: 8px;
             background: #38bdf8;
@@ -98,7 +119,7 @@
             color: #38bdf8;
         }
 
-        /* Navigation */
+        /* NAVIGATION */
 
         nav {
             position: sticky;
@@ -120,7 +141,7 @@
             color: #38bdf8;
         }
 
-        /* Sections */
+        /* SECTIONS */
 
         .container {
             max-width: 1000px;
@@ -149,7 +170,7 @@
             padding: 30px;
         }
 
-        /* Skills */
+        /* SKILLS */
 
         .skills {
             display: flex;
@@ -165,7 +186,7 @@
             border-radius: 25px;
         }
 
-        /* Projects */
+        /* PROJECT */
 
         .project {
             border-left: 4px solid #38bdf8;
@@ -183,7 +204,7 @@
             margin-bottom: 20px;
         }
 
-        /* Contact */
+        /* CONTACT */
 
         .contact-list {
             list-style: none;
@@ -198,7 +219,7 @@
             color: #38bdf8;
         }
 
-        /* Footer */
+        /* FOOTER */
 
         footer {
             text-align: center;
@@ -207,16 +228,22 @@
             color: #64748b;
         }
 
-        /* Mobile */
+        /* MOBILE */
 
         @media (max-width: 600px) {
+
             nav a {
-                margin: 0 6px;
-                font-size: 14px;
+                margin: 0 5px;
+                font-size: 13px;
             }
 
             .card {
                 padding: 22px;
+            }
+
+            .profile-photo {
+                width: 140px;
+                height: 140px;
             }
 
             .container {
@@ -228,12 +255,21 @@
 
 <body>
 
-    <!-- Hero -->
+    <!-- HERO -->
 
     <header>
         <div class="hero">
 
-            <h1>Kamron <span>Mamajonov</span></h1>
+            <!-- Your photo -->
+            <img
+                src="profile.jpg"
+                alt="Kamron Mamajonov"
+                class="profile-photo"
+            >
+
+            <h1>
+                Kamron <span>Mamajonov</span>
+            </h1>
 
             <h2>Junior HTML Developer</h2>
 
@@ -242,20 +278,32 @@
                 creating clean, responsive and user-friendly websites.
             </p>
 
+            <div class="location">
+                📍 Andijan, Uzbekistan
+            </div>
+
             <div class="buttons">
-                <a class="btn" href="https://github.com/Kamron90" target="_blank">
+
+                <a
+                    class="btn"
+                    href="https://github.com/Kamron90"
+                    target="_blank">
                     GitHub
                 </a>
 
-                <a class="btn secondary" href="#contact">
+                <a
+                    class="btn secondary"
+                    href="#contact">
                     Contact Me
                 </a>
+
             </div>
 
         </div>
     </header>
 
-    <!-- Navigation -->
+
+    <!-- NAVIGATION -->
 
     <nav>
         <a href="#about">About</a>
@@ -265,9 +313,10 @@
         <a href="#contact">Contact</a>
     </nav>
 
+
     <main class="container">
 
-        <!-- About -->
+        <!-- ABOUT -->
 
         <section id="about">
 
@@ -294,7 +343,8 @@
 
         </section>
 
-        <!-- Skills -->
+
+        <!-- SKILLS -->
 
         <section id="skills">
 
@@ -318,7 +368,8 @@
 
         </section>
 
-        <!-- Education -->
+
+        <!-- EDUCATION -->
 
         <section id="education">
 
@@ -328,7 +379,9 @@
 
             <div class="card">
 
-                <h3>Tashkent University of Information Technologies</h3>
+                <h3>
+                    Tashkent University of Information Technologies
+                </h3>
 
                 <p>
                     Fergana Branch
@@ -342,7 +395,8 @@
 
         </section>
 
-        <!-- Projects -->
+
+        <!-- PROJECTS -->
 
         <section id="projects">
 
@@ -374,7 +428,8 @@
 
         </section>
 
-        <!-- Languages -->
+
+        <!-- LANGUAGES -->
 
         <section>
 
@@ -392,7 +447,8 @@
 
         </section>
 
-        <!-- Contact -->
+
+        <!-- CONTACT -->
 
         <section id="contact">
 
@@ -438,6 +494,7 @@
         </section>
 
     </main>
+
 
     <footer>
         © 2026 Kamron Mamajonov. All rights reserved.
